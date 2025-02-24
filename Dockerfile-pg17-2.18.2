@@ -1,0 +1,11 @@
+FROM ghcr.io/zalando/spilo-17:4.0-p2
+
+RUN apt-get update && \
+    apt-get --purge remove -y timescaledb-2-oss-postgresql-17 && \
+    apt-get -f install -y && \
+    apt-get update && \
+    apt-get install -y \
+        timescaledb-2-postgresql-17='2.18.2~ubuntu22.04' \
+        timescaledb-toolkit-postgresql-17='1:1.19.0~ubuntu22.04' \
+
+CMD ["/bin/sh", "/launch.sh", "init"]
