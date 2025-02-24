@@ -29,5 +29,6 @@ jobs:
         with:
           context: .
           push: true
+          file: ./Dockerfile.pg17-2.18.2
           tags: |
             ${{ env.DOCKER_HUB_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:17-2.18.2
