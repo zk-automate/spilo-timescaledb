@@ -1,4 +1,4 @@
-name: 'Build image and deploy to Docker hub'
+name: 'Build image and push to Docker hub'
 
 on:
   push:
@@ -10,7 +10,7 @@ env:
   DOCKER_HUB_REPO: spilo
 
 jobs:
-  build-deploy-pg17-2.18.2:
+  build-deploy-pg17-2-18-2:
     name: Build and deploy pg-17 timescaledb-2.18.2
     runs-on: ubuntu-latest
 
