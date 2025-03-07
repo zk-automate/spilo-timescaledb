@@ -1,0 +1,6 @@
+FROM ghcr.io/zalando/spilo-16:3.3-p3
+
+RUN curl -s https://packagecloud.io/install/repositories/timescale/timescaledb/script.deb.sh | bash && \
+    apt-get install -y \
+        timescaledb-2-postgresql-16='2.18.2~ubuntu22.04' \
+        timescaledb-toolkit-postgresql-17='1:1.19.0~ubuntu22.04'
