@@ -10,7 +10,7 @@ env:
   DOCKER_HUB_REPO: spilo
 
 jobs:
-  build-deploy-pg16-2.18-2:
+  build-deploy-pg16-2-18-2:
     name: Build and deploy pg-16 timescaledb-2.18.2
     runs-on: ubuntu-latest
 
